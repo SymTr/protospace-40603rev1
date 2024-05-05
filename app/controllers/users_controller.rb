@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
 
   def show
-  end
-    
+    @user = User.find(params[:id])
+    @prototypes = @user.prototypes
+  end  
 
 end
